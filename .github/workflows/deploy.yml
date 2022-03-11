@@ -23,6 +23,6 @@ jobs:
           fetch-depth: 0
       - name: Deploy
         env:
-          HEROKU_API_KEY: ${{42361526-08b6-4595-a4f2-e23d7880271a}}
+          HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
           HEROKU_APP_NAME: "hkbucomp7940-21470561-bot"  # Rename this to the app of your Heroku app.
         run: git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
